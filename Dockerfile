@@ -4,14 +4,15 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-COPY ["./HelloWorldDotNet/HelloWorldDotNet.csproj", "."]
-RUN dotnet restore "./HelloWorldDotNet/HelloWorldDotNet.csproj"
+RUN cd HelloWorldDotNet
+COPY ["./HelloWorldDotNet.csproj", "."]
+RUN dotnet restore "HelloWorldDotNet.csproj"
 COPY . .
 
-RUN dotnet build "./HelloWorldDotNet/HelloWorldDotNet.csproj" -c Release -o /app/build
+RUN dotnet build "HelloWorldDotNet.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "./HelloWorldDotNet/HelloWorldDotNet.csproj" -c Release -o /app/publish
+RUN dotnet publish "HelloWorldDotNet.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
