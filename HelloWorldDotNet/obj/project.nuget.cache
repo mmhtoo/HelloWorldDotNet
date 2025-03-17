@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OIldqkHkDBw=",
+  "success": true,
+  "projectFilePath": "/Users/mmhtoo/Documents/sharings/HelloWorldDotNet/HelloWorldDotNet/HelloWorldDotNet.csproj",
+  "expectedPackageFiles": [
+    "/Users/mmhtoo/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "/Users/mmhtoo/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
