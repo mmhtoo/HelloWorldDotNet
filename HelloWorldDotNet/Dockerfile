@@ -4,7 +4,6 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-RUN cd HelloWorldDotNet
 COPY ["./HelloWorldDotNet.csproj", "."]
 RUN dotnet restore "HelloWorldDotNet.csproj"
 COPY . .
