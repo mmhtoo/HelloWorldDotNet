@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Login Github Cli
         run: |
-          gh auth login --with-token ${{ secrets.GH_TOKEN }}
+          gh auth login -s codespace
 
       - name: Deploy to Codespace VM
         run: |
