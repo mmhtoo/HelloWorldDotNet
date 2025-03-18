@@ -45,4 +45,4 @@ jobs:
 
       - name: Deploy to Codespace VM
         run: |
-          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} -- "ls && git pull origin main && docker compose down && docker compose up -d"
+          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} -- "cd /workspaces/HelloWorldDotNet && git pull origin main && docker compose down && docker compose up -d"
