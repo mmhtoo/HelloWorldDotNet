@@ -45,5 +45,5 @@ jobs:
 
       - name: Deploy to Codespace VM
         run: |
-          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} 
+          gh codespace ssh -c ${{ secrets.CODESPACE_NAME }} --t
           docker compose up -d
